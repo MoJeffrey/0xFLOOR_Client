@@ -185,9 +185,9 @@ const SelectedInfo = ref({
     name: '',
     address: '',
     currencyId: 1,
-    networkId: 1 as number | null,
+    networkId: 1,
     networkName: '',
-    withdrawalAddressId: 1 as number | null,
+    withdrawalAddressId: 1,
     withdrawalsAddress: '',
     withdrawalsAddressNotes: '',
     minimumWithdrawal: 1,
@@ -270,7 +270,7 @@ const changeCurrency = (currencyId) => {
         SelectedInfo.value.networkName = SelectedInfo.value.NetworkList[0].name
         changeNetwork(SelectedInfo.value.networkId)
     }else{
-        SelectedInfo.value.networkId = null
+        SelectedInfo.value.networkId = null as number
     }
 
 }
@@ -280,7 +280,7 @@ const changeNetwork = (currencyNetworkId) => {
         SelectedInfo.value.withdrawalAddressId = SelectedInfo.value.WithdrawalsAddressList[0].WithdrawalAddressId
         changeWithdrawalAddress(SelectedInfo.value.withdrawalAddressId)
     }else{
-        SelectedInfo.value.withdrawalAddressId = null
+        SelectedInfo.value.withdrawalAddressId = null as number
     }
 }
 const changeWithdrawalAddress = (withdrawalAddressId) => {
@@ -360,10 +360,7 @@ const WithdrawalManagementDisplayChange = () => {
 const inputAll = () => {
   SelectedInfo.value.withdrawalNum = SelectedInfo.value.balance
 }
-const copy = (data) => {
-    navigator.clipboard.writeText(data);
-    ElNotification({message: '已复制', type: 'success'})
-}
+
 Init()
 
 </script>

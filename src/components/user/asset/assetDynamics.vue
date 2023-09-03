@@ -286,7 +286,7 @@ defineExpose({ GetWalletLogList })
             cursor: pointer;
         }
     }
-    ::v-deep .el-table {
+    :deep(.el-table) {
         --el-table-border-color: none !important;
         --el-table-row-hover-bg-color: none !important;
         --el-table-bg-color: #0A0A0A !important;

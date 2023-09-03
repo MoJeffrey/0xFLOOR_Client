@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../view/home_index.vue'
+import Home from '../view/index.vue'
 import Login from '../components/login/user-login.vue'
 import Register from '../components/register/user-Register.vue'
 import Navigation from '../components/navigation/user-navigation.vue'
@@ -19,12 +19,8 @@ const route = createRouter({
         // PC端
         {
             path: '/',
-            //路由到的地址(自定义)
             component: Home,
-            //引入组件，组件Home.vue所在路径
-            //Home.vue是需要路由的vue组件
             name: 'home',
-            //首页
         },
         {
             // 导航栏组件

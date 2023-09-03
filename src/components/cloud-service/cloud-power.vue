@@ -371,8 +371,6 @@ Init()
 
 <style scoped lang="scss">
 .user-box {
-    width: 1920px;
-    //height: 1080px;
     background-color: #fff;
     margin: 0 auto;
 }

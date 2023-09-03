@@ -20,7 +20,8 @@
         "noUnusedParameters": true,
         "noFallthroughCasesInSwitch": true,
 
-        "noImplicitReturns": false
+        "noImplicitReturns": false,
+        "allowSyntheticDefaultImports": true
     },
     "include": [
         "src/**/*.ts",

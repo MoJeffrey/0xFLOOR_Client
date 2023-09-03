@@ -1,50 +1,39 @@
 <template>
     <div class="bottom">
-        <div class="bottom-box">
-            <span>
-                <div class="logo-icon">
-                    <img src="#" />
-                    <p>OxFloor</p>
-                </div>
-                <div class="code-box">
-                    <div></div>
-                    <div></div>
-                </div>
-            </span>
-            <div class="nav-box">
-                <div>
-                    <h1>公司</h1>
-                    <p>关于我们</p>
-                    <p>新闻</p>
-                    <p>资讯</p>
-                    <p>公告</p>
-                </div>
-                <div>
-                    <h1>产品</h1>
-                    <p>矿机共享</p>
-                    <p>云托管</p>
-                    <p>云服务</p>
-                </div>
-                <div>
-                    <h1>服务</h1>
-                    <p>机构服务</p>
-                    <p>三方市场</p>
-                    <p>数据中心</p>
-                    <p>算力计算器</p>
-                </div>
-                <div>
-                    <h1>支持</h1>
-                    <p>帮助中心</p>
-                    <p>提交工单</p>
-                    <p>联系我们</p>
-                </div>
+        <div class="left-box">
+            <img class="logo" alt="" src="/src/assets/img/bottom/logo.png"/>
+            <div class="text">Join our newsletter to stay up to date on features and releases</div>
+
+            <div class="input_gmail">
+                <img class="logo_google" alt="" src="/src/assets/img/bottom/logo_google.png"/>
+                <el-input placeholder="Email Address"/>
             </div>
+
         </div>
-        <div class="agreement-box">
-            <div class="agr-box">
-                <p>&nbsp;条款和条件&nbsp;</p>
-                |
-                <p>&nbsp;隐私政策&nbsp;</p>
+        <div class="center-box">
+            <div class="item">常见问题</div>
+            <div class="item">加入团队</div>
+            <div class="item">关于我们</div>
+            <div class="item">帮助中心</div>
+            <div class="item">公告</div>
+            <div class="item">意见反馈</div>
+        </div>
+        <div class="right-box">
+            <div class="item">
+                <img class="logo" alt="" src="/src/assets/img/bottom/logo_github.png"/>
+                <div class="text">github-fill</div>
+            </div>
+            <div class="item">
+                <img class="logo" alt="" src="/src/assets/img/bottom/logo_x.png"/>
+                <div class="text">twitter</div>
+            </div>
+            <div class="item">
+                <img class="logo" alt="" src="/src/assets/img/bottom/logo_ins.png"/>
+                <div class="text">ins</div>
+            </div>
+            <div class="item">
+                <img class="logo" alt="" src="/src/assets/img/bottom/logo_fb.png"/>
+                <div class="text">facebook</div>
             </div>
         </div>
     </div>
@@ -53,118 +42,108 @@
 <script setup lang="ts"></script>
 
 <style scoped lang="scss">
+
 .bottom {
-    width: 1920px;
-    height: 497px;
-    background: #11173e;
+    border-top: 0.08rem solid rgba(189,196,202,0.26);
+    background: #000000;
     margin: 0 auto;
     display: flex;
     justify-content: center;
-    //align-items: center;
     position: relative;
-}
-.bottom-box {
-    width: 1200px;
-    height: 100%;
-    display: flex;
-    //justify-content: center;
-    //align-items: center;
-    padding-top: 110px;
-    box-sizing: border-box;
-    .logo-icon {
+
+    .left-box {
+        width: 25%;
+
+        .logo {
+            width: 10rem;
+        }
+
+        .text {
+            margin-left: 1.5rem;
+            font-family: Microsoft YaHei-Regular, Microsoft YaHei,serif;
+            font-weight: 400;
+            color: rgba(255,255,255,0.5);
+        }
+
+
+
+        .input_gmail {
+            margin-top: 2rem;
+            margin-left: 1.5rem;
+            width: 20rem;
+            position:relative;
+
+            .logo_google {
+                width: 1.5rem;
+                height: 1.5rem;
+                position: absolute;
+                z-index: 9999;
+                right: 1rem;
+                top: 6px;
+            }
+
+            ::v-deep .el-input__inner {
+                margin-left: 3%;
+                font-size: 0.5rem;
+                font-family: PingFang SC-Medium, PingFang SC,serif;
+                font-weight: 500;
+                color: rgba(255,255,255,0.5);
+                line-height: 1.5rem;
+            }
+
+            ::v-deep .el-input__wrapper {
+                width: 100%;
+                height: 2.5rem;
+                background: #131515;
+                color:#fff;
+                box-shadow: none !important;
+                border-radius: 20px;
+                text-align: center;
+            }
+        }
+
+    }
+
+    .center-box {
         display: flex;
-        p {
-            font-size: 34px;
-            font-weight: bold;
-            background: linear-gradient(
-                to right,
-                rgba(12, 243, 235, 0.8) 40%,
-                rgb(231, 65, 231) 80%
-            );
-            -webkit-background-clip: text;
-            color: transparent;
-            cursor: pointer;
-            //line-height: 58px;
-            margin-left: 10px;
+        padding: 2rem 10rem 0 10rem;
+        width: 60%;
+        flex-wrap: wrap;
+
+        .item {
+            flex: 1;
+            font-size: 0.5rem;
+            font-family: Microsoft YaHei-Regular, Microsoft YaHei,serif;
+            font-weight: 400;
+            color: #FFFFFF;
         }
     }
-    .code-box {
-        width: 225px;
-        height: 180px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        div {
-            width: 100px;
-            height: 100px;
-            background-color: white;
+
+    .right-box {
+        width: 15%;
+
+        .item {
+            display: flex;
+            margin: 1rem 0;
+
+            .logo {
+                width: 2rem;
+                height: 2rem;
+            }
+
+            .text {
+                margin: 0 1rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 0.5rem;
+                font-family: Microsoft YaHei-Regular, Microsoft YaHei,serif;
+                font-weight: 400;
+                color: rgba(255,255,255,0.5);
+                text-transform: uppercase;
+            }
         }
     }
 }
-.nav-box {
-    width: 690px;
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-    div h1 {
-        font-size: 24px;
-        font-weight: 400;
-        color: #ffffff;
-        cursor: pointer;
-        transition: all 0.3s ease;
-    }
-    div h1:hover {
-        background: linear-gradient(
-            320deg,
-            rgba(0, 255, 166, 0.67),
-            rgba(215, 15, 215, 0.31)
-        );
-        background-clip: text;
-        color: #fff;
-        border-radius: 10px;
-        padding: 0px 10px;
-        box-sizing: border-box;
-        transition: all 0.3s ease;
-    }
-    div p:hover {
-        background: linear-gradient(
-            320deg,
-            rgba(0, 255, 166, 0.67),
-            rgba(215, 15, 215, 0.31)
-        );
-        background-clip: text;
-        color: #fff;
-        border-radius: 10px;
-        padding: 0px 10px;
-        box-sizing: border-box;
-        transition: all 0.3s ease;
-    }
-    div p {
-        font-size: 18px;
-        font-weight: 400;
-        color: #ffffff;
-        opacity: 0.7;
-        margin: 30px auto;
-        cursor: pointer;
-        transition: all 0.3s ease;
-    }
-}
-.agreement-box {
-    position: absolute;
-    bottom: 56px;
-    right: 550px;
-    .agr-box {
-        display: flex;
-        font-size: 18px;
-        transition: all 0.3s ease;
-        font-weight: 400;
-        color: #fefefe;
-        opacity: 0.5;
-        cursor: pointer;
-    }
-    .agr-box > P:hover {
-        color: #aaccb7;
-        transition: all 0.3s ease;
-    }
-}
+
 </style>
